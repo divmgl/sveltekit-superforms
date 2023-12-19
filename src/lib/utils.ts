@@ -1,4 +1,4 @@
-import { parse, stringify } from 'devalue';
+import { klona } from 'klona';
 
 // Thanks to: https://dev.to/tylim88/typescript-numeric-range-type-15a5#comment-22mld
 export type NumericRange<
@@ -16,5 +16,5 @@ export type NumericRange<
     >;
 
 export function clone<T>(data: T): T {
-  return parse(stringify(data));
+  return klona(data);
 }
