@@ -1,4 +1,4 @@
-import { parse, stringify } from 'devalue';
+import { klona } from 'klona';
 export function clone(data) {
-    return parse(stringify(data));
+    return klona(data);
 }
